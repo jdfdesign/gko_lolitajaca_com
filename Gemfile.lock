@@ -1,16 +1,16 @@
-PATH
-  remote: ~/Github/gko/gko_catalog
+GIT
+  remote: git@github.com:jdfdesign/gko_catalog.git
+  revision: 3b3db84bdb7129ed5bbc91baa789affd9c114c8f
+  branch: master
   specs:
     gko_catalog (0.0.02)
 
-PATH
-  remote: ~/Github/gko_cms3/gko_categories
+GIT
+  remote: git@github.com:jdfdesign/gko_cms3.git
+  revision: 8315a40a2155ed48e49c0c21ee181f4b066ba412
+  branch: master
   specs:
     gko_categories (1.0.01)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_core
-  specs:
     gko_core (1.0.01)
       RedCloth (= 4.2.9)
       activesupport-slices (= 0.0.2)
@@ -57,10 +57,6 @@ PATH
       uglifier (>= 1.0.3)
       uuid (= 2.3.5)
       will_paginate (~> 3.0.4)
-
-PATH
-  remote: ~/Github/gko_cms3/gko_stickers
-  specs:
     gko_stickers (1.0.01)
 
 GEM
@@ -251,7 +247,7 @@ GEM
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    spreadsheet (0.8.0)
+    spreadsheet (0.8.1)
       ruby-ole (>= 1.0)
     sprockets (2.2.2)
       hike (~> 1.2)
