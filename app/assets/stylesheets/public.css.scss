@@ -1,0 +1,114 @@
+$themeColor: #aad4ef;
+
+@import "variables";
+@import "twitter/awesome-bootstrap";
+@import "gko/public/base";
+//@import "gko/catalog/zoom";
+@import "flexslider/flexslider"; 
+
+#wrapper-wide-body {
+  max-width: 979px; 
+@include center-block; 
+}
+
+.page-title {
+	font-family: $serifFontFamily;
+} 
+
+.navbar-inner {
+  border: none;
+  @include border-radius(0);
+  @include box-shadow(none);
+}
+.navbar {
+	.brand {
+		float: left;
+		position: relative;
+		letter-spacing: 4px;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 20px;
+		font-weight: 300;
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+		@include size(57px, 126px);
+		@include navbar-vertical-align(57);
+		padding-left: 20px;
+		a {
+			position: absolute;
+			color: $navbarBrandColor;
+			cursor: pointer;
+			padding: 0;
+			margin: 0 auto;
+			background: transparent image-url("logo.png") center center no-repeat;
+			text-decoration: none;
+			display: block;
+			@include size(57px, 126px);
+			@include hide-text;
+			&:hover {
+				color: $white;
+				text-decoration: none;
+			};
+		}
+	}
+	.nav {
+		float:right;
+	} 
+	.nav-collapse {
+		clear: both;
+		 .nav {
+			float: left; 
+		 } 
+	 }
+	.nav > li > a {
+		text-transform: capitalize;
+		font-size: 12px;
+		text-shadow: none; 
+		padding: 8px 14px 8px; 
+	} 
+	.dropdown-menu {
+	 @include border-radius(0);
+	 @include box-shadow(none);
+	}
+}
+
+.flexslider {
+margin: 0 0 $baseLineHeight;
+border: none;
+@include border-radius(0);
+ @include box-shadow(none);
+}
+.thumbnail {
+	margin: 0;
+	padding: 0;
+	border: none;
+	@include border-radius(0);
+	@include box-shadow(none);  
+	img {
+		float:left;
+	}
+	.caption {
+		padding: 0;
+	}
+	.title {
+		text-transform: uppercase;
+		font-size: 12px;
+		letter-spacing: 0;
+		color: black;
+		font-weight: bold;
+		margin-bottom: 24px;
+		margin: 0; 
+	}
+}
+
+aside {
+	.nav > li a {
+ 		text-transform: uppercase;
+	}
+	.nav > li a:hover, 
+	.nav > li a:focus {
+		text-decoration: underline;
+		background-color: transparent;
+	} 
+}

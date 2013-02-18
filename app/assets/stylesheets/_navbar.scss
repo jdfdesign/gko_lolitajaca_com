@@ -1,0 +1,43 @@
+
+
+.navbar {
+	.brand {
+		float: left;
+		position: relative;
+		letter-spacing: 4px;
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 20px;
+		font-weight: 300;
+		font-size: 20px;
+		margin: 0;
+		padding: 0;
+		@include size(57px, 126px);
+		@include navbar-vertical-align(57);
+		padding-left: 20px;
+		a {
+			position: absolute;
+			color: $navbarBrandColor;
+			cursor: pointer;
+			padding: 0;
+			margin: 0 auto;
+			background: transparent image-url("logo.png") center center no-repeat;
+			text-decoration: none;
+			display: block;
+			@include size(57px, 126px);
+			@include hide-text;
+			&:hover {
+				color: $white;
+				text-decoration: none;
+			};
+		}
+	}
+	.nav {
+		float:right;
+	}
+	.nav > li > a {
+		text-transform: capitalize;
+		font-size: 12px;
+		text-shadow: none;
+	}
+}

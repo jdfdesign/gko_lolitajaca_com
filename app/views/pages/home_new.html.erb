@@ -1,0 +1,241 @@
+<%= content_for :after_javascript_libraries do %>
+<script type="text/javascript">
+	
+	jQuery(function($){
+		
+		$.supersized({
+		
+			// Functionality
+			slideshow               :   1,			// Slideshow on/off
+			autoplay				:	0,			// Slideshow starts playing automatically
+			start_slide             :   1,			// Start slide (0 is random)
+			stop_loop				:	0,			// Pauses slideshow on last slide
+			random					: 	0,			// Randomize slide order (Ignores start slide)
+			slide_interval          :   5000,		// Length between transitions
+			transition              :   6, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+			transition_speed		:	1000,		// Speed of transition
+			new_window				:	0,			// Image links open in new window/tab
+			pause_hover             :   0,			// Pause slideshow on hover
+			keyboard_nav            :   1,			// Keyboard navigation on/off
+			performance				:	1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+			image_protect			:	1,			// Disables image dragging and right click with Javascript
+													   
+			// Size & Position						   
+			min_width		        :   0,			// Min width allowed (in pixels)
+			min_height		        :   0,			// Min height allowed (in pixels)
+			vertical_center         :   1,			// Vertically center background
+			horizontal_center       :   1,			// Horizontally center background
+			fit_always				:	0,			// Image will never exceed browser width or height (Ignores min. dimensions)
+			fit_portrait         	:   1,			// Portrait images will not exceed browser height
+			fit_landscape			:   0,			// Landscape images will not exceed browser width
+													   
+			// Components							
+			slide_links				:	false,	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
+			thumb_links				:	0,			// Individual thumb links for each slide
+			thumbnail_navigation    :   0,			// Thumbnail navigation
+			slides  :  [<%= raw resource.images.map{|c| "{image: '#{c.url}'}" }.join(",").to_s %>],
+										
+			// Theme Options			   
+			progress_bar			:	1,			// Timer for each slide							
+			mouse_scrub				:	0
+			
+		});
+    });
+    
+</script>
+<% end %>
+<% cache ['home', site] do %>
+<div id="player-controls" class="hide">
+ <a id="previous" class="btn btn-link" href="#"><i class="icon-step-backward"></i></a>
+ <a id="pause" class="btn btn-link" href="#"><i class="icon-pause"></i></a>
+ <a id="next" class="btn btn-link" href="#"><i class="icon-step-forward"></i></a>
+</div>
+	<section class='section-cover'>
+		<div class="row-fluid">
+			<div class="span12">
+				<div class="span-content">
+					<div class="span-text">
+						<h1>The Summer Lookbook 2013</h1>
+						<hr>
+						<a href="#" id="play">play</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section><!-- Cover -->
+
+	<section class="row-fluid hero">
+		<div class="span4">
+			<div class="inner-content collection">
+				<div class="inner-text">
+					<h3>Summer Collection</h3>
+					<p>Browse our <a href="#">new shapes</a> and new print and find out our <a href="#">best-sellers</a> like the <a href="#">famous Kimono</a></p>
+					
+				</div>
+			</div>
+		</div>
+		<div class="span4">
+			<div class="inner-content shop">
+				<div class="inner-text">
+					<h3>The E-Boutique</h3>
+					<p>Coming soon</p>
+				</div>
+			</div>
+		</div>
+		<div class="span4">
+			<div class="inner-content news">
+				<div class="inner-text">
+					<h3>News & Events</h3>
+					<p>Fashion show on march 28th at Le <a href="#">Toiny Hotel</a> in St Barth - 2pm</p>
+				</div>
+			</div>
+		</div>
+	</section><!-- Hero -->
+<section class="content">
+<div class="container-fluid newsletter-container">
+	<section class="row-fluid">
+		<div class="span12">
+			<h3>Newsletter</h3>
+			<div class="input-append">
+			  <input class="span2" id="appendedInputButton" type="text">
+			  <button class="btn" type="button">Go!</button>
+			</div>
+		</div>
+	</section><!-- Newsletter -->
+</div>	
+<div id="spirit" class="container-fluid spirit-container">
+	<section id="spirit" class="row-fluid">
+		<div class="span4 offset8 spirit-content">
+			<h3>Esprit</h3>
+			<p>La femme Lolita Jaca est une citoyenne du monde et la créatrice va chercher ses influences sur tous les continents. La collection ÉTÉ 2012 est un merveilleux voyage dans l'espace et dans le temps.</p>
+
+			<p>L'Orient et le mouvement artistique Art Déco sont les principales sources d'influences des imprimés de la collection Lolita Jaca ÉTÉ 2012. Ainsi, le motif Antique est d'inspiration Architecture Art Déco, le motif Chinese reprend des thèmes Orientalistes, la série Jewelry est inspirée de la Géométrie Art Déco, quant à la série Japanese, elle va puiser ses influences dans l'Art Japonais.</p>
+
+			<p>Au fil des différents thèmes de la Collection, on découvre des formes géométriques, des motifs floraux et orientaux d'une grande modernité graphique. Les associations de couleurs sont élégantes et audacieuses et déploient une palette chromatique très étendue. La très grande richesse de modèles, de matières et de finitions permet aux femmes Lolita Jaca d'avoir toujours une tenue adaptée au lieu et à l'occasion présente. C'est sans doute la véritable élégance.</p>
+		</div>
+	</section><!-- Spirit -->
+</div>	
+<div class="container-fluid retailer-container">
+		<div class="row-fluid">
+			<div class="span12">
+				<h3>Points de vente</h3>
+			</div>
+		</div>
+		<div class="row-fluid">
+	        <div class="span3">
+	          <h6>Allemagne</h6>
+	          <ul>
+	            <li>Ansary Munich</li>
+	          </ul>
+	          <h6>Australie</h6>
+	          <ul>
+	            <li>Ivory Melbourne Australie</li>
+	          </ul>
+	          <h6>La Barbade</h6>
+	          <ul>
+	            <li>Beth and Tracie  St James</li>
+	          </ul>
+	          <h6>Emirats Arabes Unis</h6>
+	          <ul>
+	            <li>Aishti Dubai
+	            </li><li>Hamac Dubai</li>
+	          </ul>
+	          <h6>Espagne</h6>
+	          <ul>
+	            <li>Blue Marin Calvia Baleares</li>
+	            <li>the Beach Club Hotel Marbella</li>
+	          </ul>
+	         </div>
+	         <div class="span3">
+	          <h6>Etats Unis</h6>
+	          <ul>
+	            <li>Boheme Boutique Key Biscane Fl</li>
+	            <li>Calypso Carousel Nassau Bahamas</li>
+	            <li>Fontainebleau Resort Aventura Fl</li>
+	            <li>Island Home Palm Beach Fl</li>
+	            <li>Maddys 390 Greenvale Ny</li>
+	            <li>Seesaw Tenafly Nj</li>
+	          </ul>
+	          <h6>France</h6>
+	          <ul>
+	            <li>Altea Boutique Bonifacio Corse</li>
+	            <li>Boutique L Empreinte Juan Les Pins</li>
+	            <li>Lulu Boutique Saint Tropez</li>
+	            <li>Tahiti Boutique Ramatuelle</li>
+	          </ul>
+	          <h6>Grèce</h6> 
+	            <ul>
+	              <li>Soho Soho Athenes, Mykonos</li>
+	            </ul>
+	         </div>
+	         <div class="span3">
+	          <h6>Italie</h6>
+	          <ul>
+	            <li>115 Millchstrasse Livorno</li>
+	            <li>L'ancora Porto Fino</li>
+	            <li>Le Civette Porto Cervo</li>
+	            <li>Gio Moretti Milan</li>
+	            <li>Macrame Positano</li>
+	            <li>Neglia Milan</li>
+	            <li>Showroom Cataldo Battipaglia (Sa)</li>
+	            <li>Jacqueline Bologne</li>
+	          </ul>
+	          <h6>Japon</h6>
+	          <ul>
+	            <li>Rrozestt Tokyo</li>
+	          </ul>
+	          <h6>Jordanie</h6>
+	          <ul>
+	            <li>Biba Boutique Amman</li>
+	          </ul>
+	        </div>
+			<div class="span3">
+	          <h6>Kuweit</h6>
+	          <ul>
+	            <li>Aishti Kuweit City
+	          </li></ul>
+	          <h6>Liban</h6>
+	          <ul>
+	            <li>Aishti Beirut
+	          </li></ul>
+	          <h6>Principaute De Monaco</h6>
+	          <ul>
+	            <li>Addict Monaco</li>
+	          </ul>
+	          <h6>Suisse</h6>
+	          <ul>
+	            <li>Best Corner  Gstaad</li>
+	            <li>People Fashion Lounge Geneve  </li>
+	          </ul>
+	        </div>   
+		</div>
+</div>	
+<div class="container-fluid contact-container">
+	<section class="row-fluid">
+		<div class="row-fluid">
+			<div class="span8 offset4">
+				<h3>Contact</h3>
+			</div>
+		</div>
+		<div class="row-fluid">
+		    <div class="span4 offset4 address">
+				<h5>Boutique Lolita Jaca St-Barth</h5>
+				<i class="icon-map-marker"></i><h6>Adresse</h6><p>Les Hauts du Carré d'Or<br>Gustavia . 97133 Saint-Barthélemy</p>
+				<hr>
+				<i class="icon-phone"></i><h6>Téléphone</h6><p>(+59) 05 90 27 59 98</p>
+				<hr>
+				<i class="icon-comment"></i><h6>Email</h6><p>boutique@lolitajaca.com</p>
+			</div> 
+			<div class="span4 address">
+				<h5>Showroom Lolita Jaca St-Barth</h5>
+				<i class="icon-map-marker"></i><h6>Adresse</h6><p>Les Hauts du Carré d'Or<br>Gustavia . 97133 Saint-Barthélemy</p>
+				<hr>
+				<i class="icon-phone"></i><h6>Téléphone</h6><p>(+590) 590 271 764 . Fax: (+590) 590 276 818</p>
+				<hr>
+				<i class="icon-comment"></i><h6>Email</h6><p>showroom@lolitajaca.com</p>
+			</div> 
+		</div>
+	</section><!-- Contact -->
+</div><!-- Conatiner -->
+</section><!-- Conatiner -->
+<% end %>

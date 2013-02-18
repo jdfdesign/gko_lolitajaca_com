@@ -1,0 +1,221 @@
+
+@import "variables";
+@import "twitter/awesome-bootstrap";
+@import "gko/public/base";
+@import "gko/catalog/zoom";
+@import "navbar";
+@import "supersized";
+
+
+// sticky footer solution such as this one : http://ryanfait.com/sticky-footer/
+.html, body {
+	height: 100%;
+}
+#wrapper-wide-body {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	max-width: 980px;
+	@include center-block();
+}
+body#home > #wrapper-wide-body {
+	max-width: none;
+}
+h3 {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: $black;
+}
+h6 {
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+
+.container-fluid {
+	padding: 0;
+}
+.content {
+	background: $white;
+}
+
+#play {
+	@include square(50px);
+	@include border-radius(25px);
+	@include center-block();
+	font-size: 12px;
+	line-height: 50px;
+	font-style: italic;
+	background: $black;
+	background-color: rgba(0, 0, 0, .7);
+	border: 1px solid $white;
+	color: $white;
+	display: block;
+	margin-top: $baseLineHeight;
+}
+#player-controls {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: -998;
+	background: $white;
+	padding: $baseLineHeight;
+	> a  {
+		cursor: pointer;
+	}
+}
+.section-cover {
+	position: relative;
+	text-align: center;
+	color: $black;
+	padding: 100px;
+	h1 {
+		font-size: 50px;
+		line-height: 75px;
+		text-transform: uppercase;
+		font-style: italic;
+		font-weight: 300;
+		&.lookbook {
+			text-transform: none;
+		}
+	}
+	hr {
+		width:50%;
+		text-align: center;
+		margin: 0 auto;
+	}
+	i {
+
+	}
+
+}
+.hero {
+	padding: $baseLineHeight * 2;
+	@include box-sizing(border-box);
+	.inner-content {
+		padding: 12px;
+		background: $white;
+		background-color: rgba(255, 255, 255, .7);
+		border: 1px solid $white;
+		display: block;
+		overflow: hidden;
+		&:hover {
+			background-color: rgba(255, 255, 255, .9);
+		}
+
+	}
+	.inner-text {
+		padding: 12px;
+		border: 1px solid $white;
+		min-height: 120px;
+	}
+	
+}
+.spirit-container {
+	background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+	background-image: asset-url("spirit.jpg", image);
+	.spirit-content {
+		background-color: $white;
+		padding: $baseLineHeight * 2;
+	}
+}
+
+
+
+.contact-container {
+	@include box-sizing(border-box);
+	padding: $baseLineHeight * 2;
+	background-size: contain;
+    background-position: top left;
+    background-repeat: no-repeat;
+	background-image: asset-url("120608_LolitaJaca_01_115.jpg", image);
+	background-color: $white;
+	min-height: 500px;
+
+	hr {
+		max-width: 80px;
+	}
+	h5 {
+		text-transform: capitalize;
+		font-size: 16px;
+		letter-spacing: 0;
+		color: $black;
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: 24px;
+	}
+	h6 {
+		text-transform: uppercase;
+		font-size: 12px;
+		letter-spacing: 1px;
+		color: $black;
+		font-family: $baseFontFamily;
+		font-weight: bold;
+		margin-bottom: 6px;
+	}
+	i {
+		display: block;
+		color: $black;
+	}
+	p {
+		font-family: $serifFontFamily;
+		font-style: italic;
+	}
+	
+}
+
+
+.newsletter-container {
+	background: #f4f4ea;
+	h3 {
+		display: inline-block;
+	}
+}
+.retailer-container {
+	padding: $baseLineHeight * 2;
+	background: #f4f4ea;
+	h6 {
+		color: $black;
+	}
+}
+.contact-container,
+.newsletter-container,
+.retailer-container {
+	> .row-fluid {
+		max-width: 980px;
+		@include center-block();
+	}
+	
+}
+.thumbnail {
+	margin: 0;
+	padding: 0;
+	border: none;
+	@include border-radius(0);
+	@include box-shadow(none);  
+	img {
+		float:left;
+	}
+	.caption {
+		padding: 0;
+	}
+	.title {
+		text-transform: capitalize;
+		font-size: 16px;
+		letter-spacing: 0;
+		color: black;
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: 24px;
+		margin: 0;
+	}
+}
+.grid.grid4 {
+	margin-left: 0;
+}
+.grid.grid4 > li {
+	margin-left: 0;
+	width: 25%;
+}
