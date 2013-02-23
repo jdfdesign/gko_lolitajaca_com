@@ -111,4 +111,21 @@ aside {
 		text-decoration: underline;
 		background-color: transparent;
 	} 
-}
+
+}  
+
+	
+	.thumb {
+		@include square(40px);
+		display: inline-block;
+	  	@include ie7-restore-right-whitespace();
+	  	line-height: 20px;
+	  	vertical-align: text-top;
+	  	background-position: center center;
+	  	background-repeat: no-repeat;
+	  	margin-top: 1px;
+	} 
+	
+	.thumb.silk_babel_lagoon {
+	  background-image: url("print_silk_babel_lagoon.jpg");
+	}

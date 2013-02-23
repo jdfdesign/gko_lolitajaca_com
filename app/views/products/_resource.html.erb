@@ -1,0 +1,35 @@
+<% cache [action_name, resource.site, I18n.locale, resource.section, resource, "v3"] do %>
+	<article class='product'>
+		<div class="row-fluid">
+			<div class="span8">
+				<%= render_slideshow_for(resource) %>
+				<%#= render 'images', :images => resource.images %> 
+			</div>
+			<div class="span4">
+				<%= page_title(resource.title) %>
+				<%= render_html_text(resource.body) %>
+				<%= render 'properties' %>  
+				<% if resource.has_variants? %>
+			      <div id="product-variants">
+			        <h4 class="product-section-title"><%= t(:variants) %></h4>
+			        <ul class="nav">
+			          <% resource.variants.each_with_index do |v,index|
+			            next if v.option_values.empty?  %> 
+						<% values = v.option_values.joins(:option_type).order("option_types.position asc") 
+						   values.map! do |ov| %>
+			            <li id="<%= ov.name %>"><a href="#" class="btn-popover" data-toggle="popover" data-placement="left" data-container="body" data-content='<%= image_tag("print_#{ov.name}.jpg").html_safe %>' data-title="<%= ov.presentation %>" data-html="true" data-trigger="hover"><%= ov.presentation %></a></li>
+						<% end %>
+			          <% end%>
+			        </ul>
+			      </div>
+			    <% end %> 
+				<%#= indivisible_number_to_currency resource.price %>
+				<%= render_resource_categories(:title => "Voir plus") %>
+				<%= render_resource_stickers %>
+				<%#= render_next_previous %> 
+			   <%= pin_it_button(resource.images.first)  %>
+			</div>
+		</div>
+	</article>
+<% end %>
+

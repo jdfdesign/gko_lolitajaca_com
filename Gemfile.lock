@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko_catalog.git
-  revision: 3b3db84bdb7129ed5bbc91baa789affd9c114c8f
+  revision: 1a4c6b840ee6029d29be4c7291701ad6333d05af
   branch: master
   specs:
     gko_catalog (0.0.02)
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: 8315a40a2155ed48e49c0c21ee181f4b066ba412
+  revision: bbc9c23ce04e4e906c74eb555fd1edcbf5d3b76b
   branch: master
   specs:
     gko_categories (1.0.01)
@@ -92,7 +92,7 @@ GEM
       multi_json (~> 1.0)
     activesupport-slices (0.0.2)
     acts_as_indexed (0.7.8)
-    addressable (2.3.2)
+    addressable (2.3.3)
     arel (3.0.2)
     babosa (0.3.9)
     backup (3.0.27)
@@ -239,7 +239,7 @@ GEM
       actionpack
     ruby-ole (1.2.11.6)
     rubyzip (0.9.6.1)
-    sass (3.2.5)
+    sass (3.2.6)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
