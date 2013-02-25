@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko_catalog.git
-  revision: 1a4c6b840ee6029d29be4c7291701ad6333d05af
+  revision: e5dec2fcad826fa73a2c47a7f3ff7ad12d3cab50
   branch: master
   specs:
     gko_catalog (0.0.02)
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: bbc9c23ce04e4e906c74eb555fd1edcbf5d3b76b
+  revision: 000254237b4c18cfe2e1e916ad4d07e26420a4bb
   branch: master
   specs:
     gko_categories (1.0.01)
@@ -230,7 +230,7 @@ GEM
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
     rake (10.0.3)
-    rdoc (3.12.1)
+    rdoc (3.12.2)
       json (~> 1.4)
     responders (0.9.3)
       railties (~> 3.1)

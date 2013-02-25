@@ -8,8 +8,8 @@ var Site = {
 	
 	
 		Site.attachEvents();
-		Filter.init();
-		Product.init();
+		//Filter.init();
+		//Product.init();
 		Site.onResize();
 		
 	   // Zoom.init();

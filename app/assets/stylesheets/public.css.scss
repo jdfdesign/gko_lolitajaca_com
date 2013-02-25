@@ -4,21 +4,41 @@ $themeColor: #aad4ef;
 @import "twitter/awesome-bootstrap";
 @import "gko/public/base";
 //@import "gko/catalog/zoom";
-@import "flexslider/flexslider"; 
+@import "flexslider/flexslider";
 
+.btn-custom {
+  background-color: hsl(207, 58%, 75%) !important;
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#bad6ec", endColorstr="#9ac2e4");
+  background-image: -khtml-gradient(linear, left top, left bottom, from(#bad6ec), to(#9ac2e4));
+  background-image: -moz-linear-gradient(top, #bad6ec, #9ac2e4);
+  background-image: -ms-linear-gradient(top, #bad6ec, #9ac2e4);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #bad6ec), color-stop(100%, #9ac2e4));
+  background-image: -webkit-linear-gradient(top, #bad6ec, #9ac2e4);
+  background-image: -o-linear-gradient(top, #bad6ec, #9ac2e4);
+  background-image: linear-gradient(#bad6ec, #9ac2e4);
+  border-color: #9ac2e4 #9ac2e4 hsl(207, 58%, 73%);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.13);
+  -webkit-font-smoothing: antialiased;
+} 
+// Layout
+// --------------------------------------------------
 #wrapper-wide-body {
   max-width: 979px; 
-@include center-block; 
+  @include center-block; 
 }
 
 .page-title {
 	font-family: $serifFontFamily;
 } 
-
+// Navbar
+// --------------------------------------------------
 .navbar-inner {
   border: none;
   @include border-radius(0);
   @include box-shadow(none);
+  border-bottom: 1px solid #eeeeee;
 }
 .navbar {
 	.brand {
@@ -34,14 +54,13 @@ $themeColor: #aad4ef;
 		padding: 0;
 		@include size(57px, 126px);
 		@include navbar-vertical-align(57);
-		padding-left: 20px;
 		a {
 			position: absolute;
 			color: $navbarBrandColor;
 			cursor: pointer;
 			padding: 0;
 			margin: 0 auto;
-			background: transparent image-url("logo.png") center center no-repeat;
+			background: transparent image-url("logo.png") top left no-repeat;
 			text-decoration: none;
 			display: block;
 			@include size(57px, 126px);
@@ -72,13 +91,37 @@ $themeColor: #aad4ef;
 	 @include box-shadow(none);
 	}
 }
-
+// Flexslider
+// --------------------------------------------------
 .flexslider {
-margin: 0 0 $baseLineHeight;
-border: none;
-@include border-radius(0);
- @include box-shadow(none);
+	margin: 0 0 $baseLineHeight;
+	border: none;
+	@include border-radius(0);
+ 	@include box-shadow(none);
+} 
+// Product
+// --------------------------------------------------
+#products {
+	.page-title {
+		font-size: 18px; 
+		text-transform: uppercase;
+    }
 }
+.nav-social-buttons {
+	li {
+		float: left;
+		margin-left: 4px;
+	}
+	@include clearfix();
+}
+#product-variants {
+	.nav > li > a > span {
+		font-style: italic;
+		font-size: $baseFontSize - 2;
+	}
+}
+// Grid
+// --------------------------------------------------
 .thumbnail {
 	margin: 0;
 	padding: 0;
@@ -86,7 +129,7 @@ border: none;
 	@include border-radius(0);
 	@include box-shadow(none);  
 	img {
-		float:left;
+		//float:left;
 	}
 	.caption {
 		padding: 0;
@@ -99,9 +142,16 @@ border: none;
 		font-weight: bold;
 		margin-bottom: 24px;
 		margin: 0; 
+		text-align: center;
+	}
+	.product-price {
+		text-align: center; 
+		font-size: 9px;
 	}
 }
 
+// Aside
+// --------------------------------------------------
 aside {
 	.nav > li a {
  		text-transform: uppercase;
@@ -113,19 +163,21 @@ aside {
 	} 
 
 }  
+// Footer
+// --------------------------------------------------
+footer {   
+	margin-top: $baseLineHeight*2;
+	padding-bottom: $baseLineHeight*2;
+	border-top: 1px solid #eeeeee;
+	border-bottom: 1px solid #eeeeee;
+	h4 {
+  		text-transform: uppercase; 
+    }
+	.nav.social-media-nav > li > a {
 
-	
-	.thumb {
-		@include square(40px);
-		display: inline-block;
-	  	@include ie7-restore-right-whitespace();
-	  	line-height: 20px;
-	  	vertical-align: text-top;
-	  	background-position: center center;
-	  	background-repeat: no-repeat;
-	  	margin-top: 1px;
-	} 
-	
-	.thumb.silk_babel_lagoon {
-	  background-image: url("print_silk_babel_lagoon.jpg");
+		i {
+			font-size: 18px;
+		}
 	}
+}
+

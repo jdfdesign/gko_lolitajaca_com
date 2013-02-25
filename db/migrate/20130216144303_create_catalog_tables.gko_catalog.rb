@@ -121,7 +121,7 @@ class CreateCatalogTables < ActiveRecord::Migration
     create_table :property_translations, :force => true  do |t|
       t.integer :property_id, :null => false
       t.string :locale, :null => false
-      t.string :presentation, :null => false
+      t.string :presentation
       t.timestamps
     end
     add_index :property_translations, [:property_id, :locale], :name => "index_property_translations_on_property_and_locale"
