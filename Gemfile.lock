@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: e3fba46c72221e6e30f6f90d2f512e7a318bf9c9
+  revision: af1283cf7d7685aff77c1b86f8dfd30469d62ec3
   branch: master
   specs:
     gko_categories (1.0.01)
