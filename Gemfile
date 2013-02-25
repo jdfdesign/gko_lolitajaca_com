@@ -14,6 +14,9 @@ group :production do
   end
   gem "gko_catalog", :git => 'git@github.com:jdfdesign/gko_catalog.git', :branch => "master"
 end
+
+gem 'therubyracer'
+gem 'execjs'
 #group :development, :test do
 #  gem "gko_core", :path => '~/Github/gko_cms3/gko_core'
 #  gem "gko_catalog", :path => '~/Github/gko/gko_catalog' 
