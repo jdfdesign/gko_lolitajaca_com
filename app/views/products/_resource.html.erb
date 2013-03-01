@@ -1,12 +1,17 @@
-<% resource_cache(resource) do %> 
+<%# resource_cache(resource) do %> 
   <article class='product'>
     <div class="row-fluid">
-      <div class="span7"> 
-        <%= render_slideshow_for(resource) %> 
+      <div class="span6" id="product-images-container"> 
+        <%#= render_slideshow_for(resource) %>
+ 		<%= render 'images', :images => resource.images %>
       </div>
-      <div class="span5">
+      <div class="span6">
         <%= page_title(resource.title) %>
-        <%= render_html_text(resource.body) %>
+		<p class="product-price"><%= indivisible_number_to_currency resource.price %></p>
+        <% unless resource.body.blank? %>
+			<hr> 
+			<%= render_html_text(resource.body) %>
+		<% end %>
         <% unless @product_properties.empty? %> 
         <hr>
         <div class="product_properties">
@@ -18,7 +23,7 @@
               <td><strong><%= product_property.property_presentation %></strong></td>
               <td><%= product_property.value %></td>
             </tr>
-            <% end %> 
+            <% end %>
           </tbody>
           </table>
         </div>
@@ -28,12 +33,17 @@
           <div id="product-variants">
           <p>
           <ul class="nav">
-            <% resource.variants.order("variants.price ASC").each_with_index do |v,index|
-            next if v.option_values.empty?  %> 
+            <% resource.variants.order("variants.price ASC").each_with_index do |v,index| %>
+            <% next if v.option_values.empty?  %>
+
+            <% if v.images.size > 0 %>
+               <li class="product-variant"><a href="<%= variant_url(v) %>" data-remote="true"><%= image_tag(v.thumbnail.thumbnail("x200").url) %></a></li>
+			<% else %>
             <% values = v.option_values.joins(:option_type).order("option_types.position asc") 
                values.map! do |ov| %>
-            <li id="<%= ov.name %>"><a href="#" class="btn-popover" data-toggle="popover" data-placement="left" data-container="body" data-content='<%= image_tag("print_#{ov.name}.jpg").html_safe %>' data-title="<%= ov.presentation %>" data-html="true" data-trigger="hover"><%= ov.presentation %><span class="pull-right"><%= indivisible_number_to_currency v.price %></span></a></li>
+            <li id="<%= ov.option_type.name %>_<%= ov.name %>"><a href="#{ov.name}" class="btn btn-link btn-popover" data-toggle="popover" data-placement="left" data-container="body" data-content='<%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg").html_safe %>' data-title="<%= ov.presentation %>" data-html="true" data-trigger="hover"><%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg", :class => "print-preview") %><%#= ov.presentation %><span class="pull-right"><%#= indivisible_number_to_currency v.price %></span></a></li>
             <% end %>
+			<% end %>
             <% end%>
           </ul> 
           </p>
@@ -72,5 +82,5 @@
       </div>
     </div>
   </article>
-<% end %>
+<%# end %>
 

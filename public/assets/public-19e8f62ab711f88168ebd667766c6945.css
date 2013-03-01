@@ -2469,8 +2469,8 @@ table th[class*="span"],
     */
 @font-face {
   font-family: "FontAwesome";
-  src: url(/assets/fontawesome-webfont.eot);
-  src: url(/assets/fontawesome-webfont.eot?#iefix) format("eot"), url(/assets/fontawesome-webfont.woff) format("woff"), url(/assets/fontawesome-webfont.ttf) format("truetype"), url(/assets/fontawesome-webfont.svg#FontAwesome) format("svg");
+  src: url(/assets/fontawesome-webfont-635909f146e208b3509acdf3b154bf0d.eot);
+  src: url(/assets/fontawesome-webfont.eot?#iefix) format("eot"), url(/assets/fontawesome-webfont-a0fbd98b232e7e1ef9cdaad813b26eb3.woff) format("woff"), url(/assets/fontawesome-webfont-6a4e273908b7e43d9e479d38b8ae5957.ttf) format("truetype"), url(/assets/fontawesome-webfont.svg#FontAwesome) format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -7478,7 +7478,7 @@ aside > section {
 
 /* line 68, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_cms3-422ead877fb9/gko_core/app/assets/stylesheets/gko/public/_default.scss */
 .missing-document-preview {
-  background: transparent url(/assets/gko/icon_pdf_grey_light_x110.png) left center no-repeat;
+  background: transparent url(/assets/gko/icon_pdf_grey_light_x110-d825c44fddb67d9997a6c30644ec1433.png) left center no-repeat;
   min-height: 110px;
 }
 
@@ -7878,7 +7878,7 @@ footer2 .nav > li > a:hover {
   position: absolute;
   top: 50%;
   left: 50%;
-  background: black url(/assets/gko/ajax-loader.gif) no-repeat center center;
+  background: black url(/assets/gko/ajax-loader-27c65463251e10a547d44f10a83e415e.gif) no-repeat center center;
   margin: -23px 0px 0px -23px;
   z-index: 100;
   -webkit-border-radius: 10;
@@ -8029,7 +8029,7 @@ html[xmlns] .slides {
   height: 30px;
   margin: -20px 0 0;
   display: block;
-  background: url(/assets/flexslider/bg_direction_nav.png) no-repeat 0 0;
+  background: url(/assets/flexslider/bg_direction_nav-3c36224a76ddbcac2e36b643832074cf.png) no-repeat 0 0;
   position: absolute;
   top: 50%;
   cursor: pointer;
@@ -8237,7 +8237,7 @@ html[xmlns] .slides {
   cursor: pointer;
   padding: 0;
   margin: 0 auto;
-  background: transparent url(/assets/logo.png) top left no-repeat;
+  background: transparent url(/assets/logo-b59f2cf816940f8b3301674175b8433c.png) top left no-repeat;
   text-decoration: none;
   display: block;
   width: 126px;

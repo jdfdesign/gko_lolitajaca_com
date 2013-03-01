@@ -26,7 +26,7 @@ $(document).ready(function() {
 	Util.updateDimensions();
 	Site.init();  
 	Carousel.init();  
-	
+	Zoom.init();
 	$('.btn-popover').popover()
 }); 
 

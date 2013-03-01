@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko_catalog.git
-  revision: e5dec2fcad826fa73a2c47a7f3ff7ad12d3cab50
+  revision: 1cef07cd3c3aa2b77dbadcc0c34916117f15f04b
   branch: master
   specs:
     gko_catalog (0.0.02)
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: af1283cf7d7685aff77c1b86f8dfd30469d62ec3
+  revision: 422ead877fb973325324cefa01e97442838d9256
   branch: master
   specs:
     gko_categories (1.0.01)
@@ -27,7 +27,7 @@ GIT
       dragonfly (~> 0.9.13)
       dropbox-sdk (~> 1.2.0)
       exception_notification (~> 3.0.0)
-      faker (= 1.0.0)
+      execjs
       filters_spam (~> 0.2)
       gem-patching (= 0.0.3)
       globalize3 (= 0.2.0)
@@ -38,7 +38,6 @@ GIT
       jquery-rails (= 2.0.3)
       json
       letter_opener (~> 1.0.0)
-      lol_dba
       mail_form (~> 1.3.0)
       mobile-fu (~> 1.1.1)
       mysql2 (~> 0.3.11)
@@ -52,6 +51,7 @@ GIT
       rubyzip (= 0.9.6.1)
       sass-rails (~> 3.2.6)
       simple_form (~> 2.0.4)
+      therubyracer
       to_xls (~> 1.5.1)
       truncate_html (= 0.5.5)
       uglifier (>= 1.0.3)
@@ -118,7 +118,7 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.4.0)
+    coffee-script-source (1.5.0)
     cucumber (1.1.9)
       builder (>= 2.1.2)
       diff-lcs (>= 1.1.2)
@@ -141,8 +141,6 @@ GEM
       actionmailer (>= 3.0.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    faker (1.0.0)
-      i18n (~> 0.4)
     filters_spam (0.3)
     gem-patching (0.0.3)
     gherkin (2.9.3)
@@ -157,7 +155,7 @@ GEM
     has_scope (0.5.1)
     highline (1.6.8)
     hike (1.2.1)
-    i18n (0.6.1)
+    i18n (0.6.4)
     inherited_resources (1.3.1)
       has_scope (~> 0.5.0)
       responders (~> 0.6)
@@ -171,10 +169,6 @@ GEM
     letter_opener (1.0.0)
       launchy (>= 2.0.4)
     libv8 (3.11.8.13)
-    lol_dba (1.4.3)
-      actionpack (>= 3.0)
-      activerecord (>= 3.0)
-      railties (>= 3.0)
     macaddr (1.6.1)
       systemu (~> 2.5.0)
     mail (2.4.4)
@@ -249,7 +243,7 @@ GEM
     simple_form (2.0.4)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    spreadsheet (0.8.1)
+    spreadsheet (0.8.2)
       ruby-ole (>= 1.0)
     sprockets (2.2.2)
       hike (~> 1.2)
@@ -258,11 +252,11 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     systemu (2.5.2)
     term-ansicolor (1.0.7)
-    therubyracer (0.11.3)
+    therubyracer (0.11.4)
       libv8 (~> 3.11.8.12)
       ref
     thor (0.17.0)
-    tilt (1.3.3)
+    tilt (1.3.4)
     to_xls (1.5.2)
       spreadsheet
     treetop (1.4.12)
@@ -284,11 +278,9 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.2)
-  execjs
   gko_catalog!
   gko_categories!
   gko_core!
   gko_stickers!
   sass-rails (~> 3.2.6)
-  therubyracer
   uglifier (>= 1.0.3)

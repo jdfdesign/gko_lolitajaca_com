@@ -2,17 +2,15 @@ var Site = {
 	animating : false,
 	
 	init: function() {
-	
 	//	Carousel.addTheme();
 	//	Carousel.init();
 	
 	
 		Site.attachEvents();
 		//Filter.init();
-		//Product.init();
+		Product.show();
 		Site.onResize();
-		
-	   // Zoom.init();
+		//Zoom.init();
 	},
 	
 	onScroll:function(e) {

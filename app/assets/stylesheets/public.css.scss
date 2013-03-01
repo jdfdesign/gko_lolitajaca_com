@@ -3,7 +3,7 @@ $themeColor: #aad4ef;
 @import "variables";
 @import "twitter/awesome-bootstrap";
 @import "gko/public/base";
-//@import "gko/catalog/zoom";
+@import "gko/catalog/zoom";
 @import "flexslider/flexslider";
 
 .btn-custom {
@@ -22,6 +22,11 @@ $themeColor: #aad4ef;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.13);
   -webkit-font-smoothing: antialiased;
 } 
+
+.popover {
+	width: 300px;
+	height: 300px; 
+}
 // Layout
 // --------------------------------------------------
 #wrapper-wide-body {
@@ -103,7 +108,13 @@ $themeColor: #aad4ef;
 // --------------------------------------------------
 #products {
 	.page-title {
-		font-size: 18px; 
+		font-size: 14px; 
+		text-transform: uppercase;
+    }
+}
+#product {
+	.page-title {
+		font-size: 16px; 
 		text-transform: uppercase;
     }
 }
@@ -114,12 +125,7 @@ $themeColor: #aad4ef;
 	}
 	@include clearfix();
 }
-#product-variants {
-	.nav > li > a > span {
-		font-style: italic;
-		font-size: $baseFontSize - 2;
-	}
-}
+
 // Grid
 // --------------------------------------------------
 .thumbnail {
@@ -136,12 +142,15 @@ $themeColor: #aad4ef;
 	}
 	.title {
 		text-transform: uppercase;
-		font-size: 12px;
+		font-size: 12px; 
+		line-height: 16px;
 		letter-spacing: 0;
 		color: black;
 		font-weight: bold;
-		margin-bottom: 24px;
-		margin: 0; 
+		margin: 0;  
+		margin-top: $baseLineHeight/2;
+		margin-bottom: $baseLineHeight/2;
+		
 		text-align: center;
 	}
 	.product-price {
@@ -149,10 +158,41 @@ $themeColor: #aad4ef;
 		font-size: 9px;
 	}
 }
+#product-variants { 
+	.nav {
+	   @include clearfix();  
+	}
+	.nav > li > a > span {
+		font-style: italic;
+		font-size: $baseFontSize - 2;
+	}
+	li {
+		height: 200px;
+		float: left;
+	   .btn {
+		   line-height: 40px; 
+		}
+	}
+	.btn-popover {
+		text-align: left;
+		
+	} 
+	.print-preview {
+		//display: inline-block;
+		width: 60px;
+		height: 60px;
+		//margin-top: 1px;
+        //margin-right: 6px;
+		
+	}  
+}
 
 // Aside
 // --------------------------------------------------
 aside {
+	hr {
+		@include clearfix();
+	}
 	.nav > li a {
  		text-transform: uppercase;
 	}

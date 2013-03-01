@@ -1,5 +1,28 @@
 var Product = {
+	show: function() {
+		$('.product-variant a').on("ajax:beforeSend", function(evt, xhr, settings) {
+				
+				// Store de current profile for next/prev function
 
+				
+				/*if(currentModal == id) {
+					$("#modal-page").modal('show');
+					return false;
+				}
+				else {
+					currentProfile = id;
+				}*/
+				
+			}).on("ajax:success", function(evt, xhr, settings) {
+				console.log("Site.success xhr " + eval(xhr))
+				Zoom.init();
+			}).on('ajax:complete', function(evt, xhr, status) {
+			}).on("ajax:error", function(evt, xhr, status, error) {
+				var flash = $.parseJSON(xhr.getResponseHeader('X-Flash-Messages'));
+				console.log("Site.error " + flash.error);
+			});
+	},
+	
 	init: function() {
 		$('#grid-products aaa').attr('data-remote', true).attr('data-type', 'script')
 			.on("ajax:beforeSend", function(evt, xhr, settings) {

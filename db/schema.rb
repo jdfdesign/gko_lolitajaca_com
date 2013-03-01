@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130216144310) do
+ActiveRecord::Schema.define(:version => 20130301095559) do
 
   create_table "accounts", :force => true do |t|
     t.string   "reference",  :limit => 40
@@ -308,6 +308,17 @@ ActiveRecord::Schema.define(:version => 20130216144310) do
 
   add_index "mail_methods", ["site_id"], :name => "index_mail_methods_on_site_id"
 
+  create_table "option_type_translations", :force => true do |t|
+    t.integer  "option_type_id"
+    t.string   "locale"
+    t.string   "presentation"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "option_type_translations", ["locale"], :name => "index_option_type_translations_on_locale"
+  add_index "option_type_translations", ["option_type_id"], :name => "index_option_type_translations_on_option_type_id"
+
   create_table "option_types", :force => true do |t|
     t.integer  "site_id",                                    :null => false
     t.string   "name",         :limit => 100
@@ -429,18 +440,22 @@ ActiveRecord::Schema.define(:version => 20130216144310) do
   add_index "product_translations", ["product_id", "locale"], :name => "index_product_translations_on_product_and_locale"
 
   create_table "products", :force => true do |t|
-    t.integer  "section_id",       :null => false
-    t.integer  "site_id",          :null => false
+    t.integer  "section_id",                         :null => false
+    t.integer  "site_id",                            :null => false
     t.text     "body"
     t.string   "title"
     t.string   "meta_title"
     t.string   "meta_description"
     t.string   "slug"
     t.date     "available_on"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.integer  "position",         :default => 0,    :null => false
+    t.boolean  "visible",          :default => true, :null => false
+    t.text     "options"
   end
 
+  add_index "products", ["position", "section_id"], :name => "index_products_on_position_and_section_id"
   add_index "products", ["section_id"], :name => "index_products_on_section"
   add_index "products", ["site_id"], :name => "index_products_on_site_id"
 
