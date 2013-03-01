@@ -7738,7 +7738,7 @@ footer2 .nav > li > a:hover {
 *Cusor fix from IE by Chris Pearson ( http://www.upland.co.uk )
 *
 */
-/* line 21, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy.scss */
+/* line 21, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy.scss */
 .parent-zoom img {
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 200ms;
@@ -7749,7 +7749,7 @@ footer2 .nav > li > a:hover {
   border: 0;
 }
 
-/* line 32, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy.scss */
+/* line 32, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy.scss */
 .zoomy {
   position: absolute;
   visibility: hidden;
@@ -7769,7 +7769,7 @@ footer2 .nav > li > a:hover {
   border: 3px solid white;
 }
 
-/* line 50, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy.scss */
+/* line 50, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy.scss */
 .zoomy span {
   display: block;
   margin: 5px auto;
@@ -7781,20 +7781,20 @@ footer2 .nav > li > a:hover {
   -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#55FFFFFF, endColorstr=#00ffffff);
 }
 
-/* line 60, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy.scss */
+/* line 60, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy.scss */
 .zoomy a {
   color: #333;
   text-decoration: none;
   outline: 0;
 }
 
-/* line 66, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy.scss */
+/* line 66, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy.scss */
 .inactive img {
   opacity: 0.85;
   filter: alpha(opacity=85);
 }
 
-/* line 70, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy.scss */
+/* line 70, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy.scss */
 .zoomy #tmp {
   max-width: none !important;
   max-height: none !important;
@@ -7805,7 +7805,7 @@ footer2 .nav > li > a:hover {
 }
 
 /* Elastislide Style */
-/* line 2, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
+/* line 2, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
 .products-thumbnails-container {
   padding: 10px 37px;
   -moz-border-radius: 10px;
@@ -7814,7 +7814,7 @@ footer2 .nav > li > a:hover {
   position: relative;
 }
 
-/* line 9, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
+/* line 9, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
 .products-thumbnails {
   *zoom: 1;
   overflow: hidden;
@@ -7829,24 +7829,24 @@ footer2 .nav > li > a:hover {
 .products-thumbnails:after {
   clear: both;
 }
-/* line 14, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
+/* line 14, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
 .products-thumbnails ul li {
   height: 100%;
   float: left;
 }
-/* line 18, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
+/* line 18, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
 .products-thumbnails ul li a {
   display: block;
   border-style: solid;
   border-color: white;
 }
-/* line 22, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
+/* line 22, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
 .products-thumbnails ul li a img {
   display: block;
   border: none;
 }
 
-/* line 34, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
+/* line 34, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
 .es-nav span {
   position: absolute;
   top: 50%;
@@ -7859,18 +7859,18 @@ footer2 .nav > li > a:hover {
   cursor: pointer;
   opacity: 0.8;
 }
-/* line 45, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
+/* line 45, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
 .es-nav span:hover {
   opacity: 1.0;
 }
-/* line 49, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
+/* line 49, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoomy_thumbs.scss */
 .es-nav span.es-nav-next {
   right: 12px;
   left: auto;
   background-position: top right;
 }
 
-/* line 4, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoom.scss */
+/* line 4, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoom.scss */
 .product-images-large-loader {
   display: none;
   width: 46px;
@@ -7887,7 +7887,7 @@ footer2 .nav > li > a:hover {
   opacity: 0.7;
 }
 
-/* line 17, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-1cef07cd3c3a/app/assets/stylesheets/gko/catalog/_zoom.scss */
+/* line 17, ../../../../.rvm/gems/ruby-1.8.7-p370/bundler/gems/gko_catalog-a8968109fc5f/app/assets/stylesheets/gko/catalog/_zoom.scss */
 .product-images-large {
   text-align: center;
 }

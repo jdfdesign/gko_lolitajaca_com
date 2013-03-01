@@ -1,6 +1,6 @@
 GIT
   remote: git@github.com:jdfdesign/gko_catalog.git
-  revision: 1cef07cd3c3aa2b77dbadcc0c34916117f15f04b
+  revision: a8968109fc5fe1900450ab3d599b007efad2f9b0
   branch: master
   specs:
     gko_catalog (0.0.02)
