@@ -1,4 +1,4 @@
-<% cache([site, I18n.locale, 'footer']) do %>
+<%# cache([site, I18n.locale, 'footer']) do %>
 <!-- Footer
 ================================================== -->
  <footer id='footer-container' class='container-fluid footer hide-on-print'>
@@ -13,10 +13,7 @@
 	 	<div class="span4">
 			<h4>Newsletter</h4>
 			<p><%= t("custom.newsletter_label") %></p>
-			<div class="input-append">
-			  <input class="span12" id="appendedInputButton" type="text" placeholder="Enter your email address">
-			  <button class="btn" type="button">Go!</button>
-			</div>
+			<%= render 'newsletter_subscriptions/inline_form' %>
 		</div>
      <div class="span4">
 		<h4><%= t("custom.pipe_title") %></h4>
@@ -25,4 +22,4 @@
      </div>
    </div>
  </footer>
-<% end %>
+<%# end %>

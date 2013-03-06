@@ -2,12 +2,11 @@
   <article class='product'>
     <div class="row-fluid">
       <div class="span6" id="product-images-container"> 
-        <%#= render_slideshow_for(resource) %>
- 		<%= render 'images', :images => resource.images %>
+ 		<%= render 'products/images', :images => resource.images %>
       </div>
       <div class="span6">
         <%= page_title(resource.title) %>
-		<p class="product-price"><%= indivisible_number_to_currency resource.price %></p>
+		<p class="product-price"><%= indivisible_number_to_currency resource.price if resource.price %></p>
         <% unless resource.body.blank? %>
 			<hr> 
 			<%= render_html_text(resource.body) %>
@@ -35,13 +34,12 @@
           <ul class="nav">
             <% resource.variants.order("variants.price ASC").each_with_index do |v,index| %>
             <% next if v.option_values.empty?  %>
-
             <% if v.images.size > 0 %>
                <li class="product-variant"><a href="<%= variant_url(v) %>" data-remote="true"><%= image_tag(v.thumbnail.thumbnail("x200").url) %></a></li>
 			<% else %>
             <% values = v.option_values.joins(:option_type).order("option_types.position asc") 
                values.map! do |ov| %>
-            <li id="<%= ov.option_type.name %>_<%= ov.name %>"><a href="#{ov.name}" class="btn btn-link btn-popover" data-toggle="popover" data-placement="left" data-container="body" data-content='<%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg").html_safe %>' data-title="<%= ov.presentation %>" data-html="true" data-trigger="hover"><%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg", :class => "print-preview") %><%#= ov.presentation %><span class="pull-right"><%#= indivisible_number_to_currency v.price %></span></a></li>
+            <li id="<%= ov.option_type.name %>_<%= ov.name %>"><a href="#{ov.name}" class="btn btn-link btn-popover" data-toggle="popover" data-placement="left" data-container="body" data-content='<%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg").html_safe %>' data-title="<%= ov.presentation %>" data-html="true" data-trigger="hover"><%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg", :class => "print-preview") %><%#= ov.presentation %><span class="pull-right"></span></a></li>
             <% end %>
 			<% end %>
             <% end%>
@@ -49,15 +47,15 @@
           </p>
           </div>
         <% end %> 
-        <hr> 
+        <hr>
           <ul class="nav nav-social-buttons">
             <!-- Facebook like link and send button -->
-            <li id="fb_like_send" class="facebook_like">
-              <div class="fb-like" data-href="<%= request.fullpath %>" data-send="true" data-layout="button_count" data-width="200" data-show-faces="false"></div>  
+            <li id="fb_like_send" class="facebook_like"> 
+			  <%= fb_like_button(request.original_url)  %>
             </li>
             <!-- pin it -->
             <li id="pinterest">
-              <%= pin_it_button(request.protocol + request.host + resource.public_url, resource.images.first)  %> 
+              <%= pin_it_button(request.original_url, resource.images.first)  %> 
             </li>
 			<!-- twitter button --> 
 			<li id="twitter">
@@ -71,14 +69,12 @@
           </ul>
        
         <hr>
-				<%= link_to(url_for([parent]), :id => 'back-to-collection', :class => 'btn btn-custom') do %>
+		<%= link_to(url_for([parent]), :id => 'back-to-collection', :class => 'btn btn-custom') do %>
           <%= raw("<i class='icon-angle-left'></i>#{t('catalog.back_to_catalog')}") %>
         <% end %>
 				<hr>
         <%= render_resource_categories(:title => "Voir plus") %>
         <%= render_resource_stickers %>
-        <%#= render_next_previous %> 
-         
       </div>
     </div>
   </article>

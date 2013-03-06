@@ -3,7 +3,7 @@
 <%= render "socials/facebook_metas",
 	:title => resource.title, 
 	:type => "product", 
-	:url => request.protocol + request.host + resource.public_url, 
+	:url => request.original_url, 
 	:image => resource.thumbnail.thumbnail("400x400").url, 
 	:site_name => site.host, 
 	:admins => 714929052 %>
