@@ -1,13 +1,13 @@
 GIT
   remote: git@github.com:jdfdesign/gko_catalog.git
-  revision: 43536187166d391c377335b7481ec8ab949081df
+  revision: 32b3d88dcd9a2f3f0ddf210747da97d7b6462141
   branch: master
   specs:
     gko_catalog (0.0.02)
 
 GIT
   remote: git@github.com:jdfdesign/gko_cms3.git
-  revision: e56181a77ce6d073ec5580a10f899f3d83f732a5
+  revision: 9798e596de05310eaa31ca3c89b0c81d39f698b4
   branch: master
   specs:
     gko_categories (1.0.01)

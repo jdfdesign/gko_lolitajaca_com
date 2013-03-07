@@ -32,7 +32,7 @@
           <div id="product-variants">
           <p>
           <ul class="nav">
-            <% resource.variants.order("variants.price ASC").each_with_index do |v,index| %>
+            <% resource.variants.order("variants.position ASC").each_with_index do |v,index| %>
             <% next if v.option_values.empty?  %>
             <% if v.images.size > 0 %>
                <li class="product-variant"><a href="<%= variant_url(v) %>" data-remote="true"><%= image_tag(v.thumbnail.thumbnail("x200").url) %></a></li>
