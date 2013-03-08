@@ -6,9 +6,7 @@
       </div>
       <div class="span6">
         <%= page_title(resource.title) %>
-        <%# if v = resource.variants.order("variants.position ASC").first.option_values.first %>
-			<!--<p class="product-print"><strong><%= v.option_type.presentation %>: </strong><%= v.presentation %></p>  -->
-        <%# end %>
+
 		<p class="product-price"><%= indivisible_number_to_currency resource.price if resource.price %></p>
         <% unless resource.body.blank? %>
 			<hr> 
