@@ -1,4 +1,4 @@
-<% resource_cache(resource) do %> 
+<%# resource_cache(resource) do %> 
   <article class='product'>
     <div class="row-fluid">
       <div class="span6" id="product-images-container"> 
@@ -6,6 +6,9 @@
       </div>
       <div class="span6">
         <%= page_title(resource.title) %>
+        <% if v = resource.variants.order("variants.position ASC").first.option_values.first %>
+			<p class="product-print"><strong><%= v.option_type.presentation %>: </strong><%= v.presentation %></p>
+        <% end %>
 		<p class="product-price"><%= indivisible_number_to_currency resource.price if resource.price %></p>
         <% unless resource.body.blank? %>
 			<hr> 
@@ -39,7 +42,7 @@
 			<% else %>
             <% values = v.option_values.joins(:option_type).order("option_types.position asc") 
                values.map! do |ov| %>
-            <li id="<%= ov.option_type.name %>_<%= ov.name %>"><a href="#{ov.name}" class="btn btn-link btn-popover" data-toggle="popover" data-placement="left" data-container="body" data-content='<%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg").html_safe %>' data-title="<%= ov.presentation %>" data-html="true" data-trigger="hover"><%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg", :class => "print-preview") %><%#= ov.presentation %><span class="pull-right"></span></a></li>
+            <li id="<%= ov.option_type.name %>_<%= ov.name %>"><a href="#<%= ov.name %>" class="btn btn-link btn-popover" data-toggle="popover" data-placement="left" data-container="body" data-content='<%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg").html_safe %>' data-title="<%= ov.presentation %>" data-html="true" data-trigger="hover"><%= image_tag("print_#{ ov.option_type.name }_#{ov.name}.jpg", :class => "print-preview") %><%#= ov.presentation %><span class="pull-right"></span></a></li>
             <% end %>
 			<% end %>
             <% end%>
@@ -73,10 +76,10 @@
           <%= raw("<i class='icon-angle-left'></i>#{t('catalog.back_to_catalog')}") %>
         <% end %>
 				<hr>
-        <%= render_resource_categories(:title => "Voir plus") %>
-        <%= render_resource_stickers %>
+        <%#= render_resource_categories(:title => "Voir plus") %>
+        <%#= render_resource_stickers %>
       </div>
     </div>
   </article>
-<% end %>
+<%# end %>
 
